@@ -1,0 +1,22 @@
+{
+  "name": "aisearchapp/aisearch-client-php",
+  "description": "Aisearch SDK for integrating AI-powered search into e-commerce sites.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "AisearchClient\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Aisearch Team",
+      "email": "support@aisearch.app"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
