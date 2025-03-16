@@ -12,7 +12,7 @@ Integrating the Aisearch SDK into your project is straightforward. You can insta
 
 - **Via Composer**: If the SDK is available on Packagist, you can add it to your project by running the command (replace `<version>` with the appropriate version if needed):
   ```bash
-  composer require aisearch/aisearch-client-php:<version>
+  composer require aisearchapp/aisearch-client-php
   ```  
   After installation, make sure to include Composer’s autoloader in your PHP script:
   ```php
@@ -25,7 +25,7 @@ Integrating the Aisearch SDK into your project is straightforward. You can insta
   require_once 'path/to/aisearch-client-php/src/Aisearch.php';  // Adjust the path as needed
 
   ```
-  Make sure all SDK files are accessible (maintain the directory structure as provided). This approach requires that you manage the loading of SDK classes (either via manual `require_once` calls or configuring an autoloader following PSR-4 for the `common\components\sdk\aisearchClient` namespace).
+  Make sure all SDK files are accessible (maintain the directory structure as provided). This approach requires that you manage the loading of SDK classes (either via manual `require_once` calls or configuring an autoloader following PSR-4 for the `AisearchClient` namespace).
 
 **Requirements**: The Aisearch SDK uses cURL for making HTTP requests. Ensure that the PHP cURL extension is enabled on your server. The SDK is designed for PHP 7+ (uses strict typing and namespaces), so use a compatible PHP version.
 
@@ -422,7 +422,8 @@ Your `search.php` (or relevant controller code) could be:
 ```php
 <?php
 require 'Aisearch.php';
-use AisearchClient\Aisearch;use AisearchClient\controllers\Search\QueryAction;
+use AisearchClient\Aisearch;
+use AisearchClient\controllers\Search\QueryAction;
 
 // Initialize Aisearch SDK
 $sdk = new Aisearch(<YOUR_SITE_ID>, '<YOUR_CLIENT_TOKEN>');
@@ -520,7 +521,8 @@ For instance, a simplified `api/search.php` might look like:
 <?php
 header('Content-Type: application/json');
 require 'Aisearch.php';
-use AisearchClient\Aisearch;use AisearchClient\controllers\Search\QueryAction;
+use AisearchClient\Aisearch;
+use AisearchClient\controllers\Search\QueryAction;
 
 // Read JSON input from client
 $input = json_decode(file_get_contents('php://input'), true);
