@@ -17,6 +17,6 @@
       "email": "support@aisearch.app"
     }
   ],
-  "minimum-stability": "stable",
-  "prefer-stable": true
+  "minimum-stability": "dev",
+  "require": {}
 }
