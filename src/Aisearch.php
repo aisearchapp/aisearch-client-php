@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AisearchClient\src;
+namespace AisearchClient;
 
 // Import controller classes that manage specific API functionalities.
 use AisearchClient\controllers\RecommendationController;
